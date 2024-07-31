@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+
+<html><!-- Do NOT put any content outside of the HTML tags-->
+	<head>
+		<title>FAQ</title>
+		<link rel="icon" type="image/png" href="logo-icon.png"/> <!-- Icon (For the image in the website tab) -->
+		<link rel= "stylesheet" type="text/css" href="style.css">
+		<script src="myscripts.js"></script>
+	</head>
+	
+    <!-- All content visible on the webpage will be inside the body tags below-->
+	<body> 
+	<div class="menu-wrap"> 
+		<input type="checkbox" class="toggler">
+		<div class="hamburger"><div></div></div>
+		<div class="menu">
+			<div>
+				<div>
+					<ul>
+						<li><a href="index.html">Home</a></li> <!-- Home page -->
+						<li><a href="products.html">Our Services</a></li> <!-- Explaination of Services -->
+						<li><a href="faq.html">FAQ</a></li> <!-- Frequently asked questions -->
+						<li><a href="regpay.html">Register & Pay</a></li> <!-- 	Regestiring accounts and bike/scooter hires -->
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="body2">
+		<div class="body-overlay">
+			<div class="logo2">
+				<!-- Calls the image and sets the dimentions of the image -->
+				<img src="logo2.png" alt="Icon" title="Our Icon" style="width: 150px; height: 150px;">
+			</div>
+			<div class="content4">
+				<br>
+				<h1>Frequently Asked Questions</h1>
+				<p>If we haven't answered your question then fill out the contact form at the bottom of the page!</p>
+				<br><br><hr><br>
+			</div>
+			<div class="content3">
+				<h3>What do I do if my bike gets a flat tire?</h3>
+				<p>If you get a flat tire or any other issue arrises with your bike or scooter, simply call: 0800 236 107, and we will send someone 
+				down to fix your problem, give a refund, or whatever else is required to rectify the situation.</p>
+			</div>
+			<br>
+			<hr>
+			<div class="content3"> <!-- There are multiple content3 divs so that the <hr> works properly -->
+				<h3>What if I no longer what to rent?</h3>
+				<p>If you have changed your mind or something has come up, depending on the situation we may grant a refund or a partial refund.
+				It is expected that if you say you will take the bike for x amount of hours that you will at least pay that amount. If there is an
+				event that is out of your control we may give a refund as mentioned before. If you change your mind a hour before taking the bike
+				or scooter out, then you will be eligible for a full refund or not asked to pay.</p>
+			</div>
+			<br>
+			<hr>
+			<div class="content3">
+				<h3>What if I have an accident?</h3>
+				<p>If you have an accident, and are hurt, then the first thing you should do is dial 111 as your health is more important than
+				the bikes. If you are okay and the bike is damaged then call 0800 236 107 and we will come and pick you and the bike (or scooter)
+				up. You may be liable for the damages depending on what has happened. If you are using the bike in an environment it is not suited
+				for (like using a road bike on a mountain track) then you will be required to pay for the damages. Every situation is assessed case 
+				by case.</p>
+			</div>
+			<br>
+			<hr>
+			<div class="content3">
+				<h3>What if I want to pick up my bike from a different location?</h3>
+				<p>If you want to pick up your rental from a different location to the ones listed on the previous page, then you will be required
+				to either contact us 24 hours before to arrange for one of our staff bring the rental to the location you want. It will come with a
+				$20 (NZD) travel fee. If you request this under the 24 hour limit, then you will be required to pay a $30 fee. This is the same for
+				returning the rentals.</p>
+			</div>
+			<br><hr><br>
+			<!-- Contact form -->
+			<div class="form_container">
+				<form form ="contact_form" onsubmit="contact_form()">  
+					<h1>Contact</h1>
+					<!-- Full Name Field -->
+					<div class="row">
+						<div class="column">
+							<h3><label for="name">Full Name</label></h3>
+						</div>
+						<div class="column2">
+							<input type="text" id="name" placeholder="Your Full Name">
+						</div>
+					</div>
+
+					<!-- Email Address Field -->
+					<div class="row">
+						<div class="column">
+							<h3><label for="email">Email Address</label></h3>
+						</div>
+						<div class="column2">
+							<input type="text" placeholder="Your Email Address">
+						</div>
+					</div>
+
+					<!-- Contact Number Field -->
+					<div class="row">
+						<div class="column">
+							<h3><label for="phone">Contact Number</label></h3>
+						</div>
+						<div class="column2">
+							<input type="text" placeholder="Your Contact Number">
+						</div>
+					</div>
+
+					<!-- Question Field -->
+					<div class="row">
+						<div class="column">
+							<h3><label for="message">Question</label></h3>
+						</div>
+						<div class="column2">
+							<textarea placeholder="What is your question?" style="height:200px"></textarea>
+						</div>
+					</div>
+
+					<br>
+					
+					<!-- Submit Button -->
+					<div class="row">
+						<input type="submit" value="Submit">
+					</div>
+				</form>
+			</div>
+			<hr><br>
+			<div class="footer">
+				&copy; Copyright Jake Boyd, all rights reserved, 2023
+			</div>
+		</div>
+		</div>
+	</div>
+	</body>
+</html> 

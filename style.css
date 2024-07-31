@@ -1,0 +1,495 @@
+/* This is your CSS file. You will use this file to style your HTML pages */
+/* Stylesheet */
+/* Importing fonts from google fonts */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap'); /* font-family: 'Roboto', sans-serif; */
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@700&display=swap'); /* font-family: 'Lato', sans-serif; */
+@import url('https://fonts.googleapis.com/css2?family=Cairo&family=PT+Sans:wght@700&family=Quicksand&display=swap'); /* font-family: 'Cairo', sans-serif; font-family: 'PT Sans', sans-serif; font-family: 'Quicksand', sans-serif; */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300&display=swap'); /* font-family: 'Inter', sans-serif; */
+
+:root{ /* Sets up colours */
+	--primary-color: rgba(0, 255, 0, 0.4); /* r, g, b, transparency */
+	--overlay-color: rgba(0, 128, 0, 0.85);
+	--menu--speed: 0.75s; /* Sets how fast the menu appears. */
+}
+
+*{ /* Sets the size and padding of the website in comparison to the rest of the window */
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+body{ /* Sets the font, font size and line height of the body text */
+	font-family: 'Roboto', sans-serif;
+	line-height: 1.4;
+}
+
+.logo { /* Places the image for index page*/
+	top: 0;
+	margin-bottom: -105px;
+	padding-left: 1115px;
+	padding-top: 10px;
+	overflow: hidden;
+}
+
+.logo2 { /* Places the image for the second page (they require different padding) */
+	top: 0;
+	margin-bottom: -105px;
+	padding-left: 1100px; /* The different padding is required due to (I think) the scroll wheel on the 2nd page */
+	padding-top: 10px;
+	overflow: hidden;
+}
+
+.btn{ /* Sets the elements for the button */
+	display: inline-block;
+	border: none;
+	background-color: var(--primary-color); /* Calls the background colour set previously */
+	color: #fff;
+	padding: 0.75rem 1.5rem;
+	margin-top: 1rem;
+	text-decoration: none; /* Gets rid of underlines on links */
+	transition: opacity 1s ease-in;
+}
+
+.btn:hover{ /* Sets the transparency when the mouse is hovering over the button */
+	opacity: 0.7;
+}
+
+.container { /* Sets widths and margins for the index page */
+	max-width: 960px;
+	margin: auto;
+	overflow: hidden;
+	padding: 0 3rem;
+}
+
+/* The showcase includes the transparent overlay, title, background image, and body text. */
+.showcase{ /* Sets colour, size, font colour, and position of the showcase */
+	background-color: var(--primary-color);
+	color: #fff;
+	height: 100%;
+	position: relative;
+}
+
+.showcase:before{ /* Places and sets up the background image */
+	content:'';
+	background: url('images/mount-taranaki-2.jpg') no-repeat center center/cover;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	z-index: -1;
+}
+
+.showcase .showcase-inner{ /* Aligns all of the items in the showcase on the index page */
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+	height: 100%; /* Makes the height resposive */
+	font-family: 'Inter', sans-serif;
+}
+
+.showcase h1{ /* Sets the font for the header text */
+	font-size: 2.55rem;
+	font-family: 'Roboto', sans-serif;
+}
+
+.showcase p{ /* Sets the font size for the body text */
+	font-size: 1.15rem;
+}
+
+.body-overlay{ /* Overlay for the second page (similar to index page) */
+	background-color: var(--primary-color);
+    width: 100%;
+	height: 100%;
+}
+
+.body{ /* Second page */
+	font-family: 'Roboto', sans-serif; /* Sets font */
+	line-height: 1.4; /* Sets the height of each line */
+	background-color: var(--overlay-color); /* Gets one of the colours set previously */
+	background: url('images/road-biking.jpg') no-repeat center center/cover; /* Gets background image */
+	width: 100%; /* Sets the width for page 2 */
+	height: 465vh; /* Sets the height of the page 2 */
+}
+
+.body2{ /* Third page */
+	font-family: 'Roboto', sans-serif; /* Sets font */
+	line-height: 1.4; /* Sets the height of each line */
+	background-color: var(--overlay-color); /* Gets one of the colours set previously */
+	background: url('images/mountain-biking4.jpg') no-repeat center center/cover; /* Gets background image */
+	width: 100%; /* Sets the width for page 3 */
+	height: 242.5vh; /* Sets the height of the page 3 */
+}
+
+.body3{ /* Fourth page */
+	font-family: 'Roboto', sans-serif; /* Sets font */
+	line-height: 1.4; /* Sets the height of each line */
+	background-color: var(--overlay-color); /* Gets one of the colours set previously */
+	background: url('images/ebike-mountain.jpg') no-repeat center center/cover; /* Gets background image */
+	width: 100%; /* Sets the width for page 3 */
+	height: 255vh; /* Sets the height of the page 3 */
+}
+
+.footer{
+	background-color: transparent; /* Makes sure there is no white */
+	text-align: center; /* Aligns to the center */
+	color: white; /* Sets text colour */
+	font-size: 20px; /* Sets font size */
+	font-family: 'Inter', sans-serif; /* Sets font */
+	font-weight: bold; /* Makes the font bold */
+}
+
+/* Class for images */
+.image{
+	margin-top: 10px; /* Places the div in releation to the top of the page */
+	margin-left: 32.5px; /* Spaces the images out from the left */
+	margin-bottom: 1px;
+	float: center-left; /* positions the images */
+	background-color: transparent; /* removes any white background the image may have */
+}
+
+.image iframe{ /* For the map */
+	margin-right: 20px; /* Places the map */
+	margin-left: 20px; /* ^^ */	
+}
+
+.image img{ /* Sets the size of the images that are in the image div class */
+	width: 200px; /* Sets the width of each image */
+	height: 200px; /* Sets the height of each image */
+	margin-right: 20px; /* Spaces each image out from eachother */
+	margin-left: 20px; /* ^^ */
+}
+
+.text1{ /* Places the text for "Linus Roadster Sport 3" */
+	width: 170px; /* Sets the width of the div */
+	margin-right: 20px; /* Helps with spacing */
+	margin-left: 55px; /* Places the text */
+	font-family: 'Lato', sans-serif; /* Sets the font for the text */
+	color: white; /* Sets the font colour for the text */
+}
+/* These are the same as "text1" */
+.text2{ /* Places the text for the 2nd image */
+	width: 170px;
+	margin-right: 20px;
+	margin-left: 300px;
+	margin-top: -22.5px;
+	font-family: 'Lato', sans-serif;
+	color: white;
+}
+
+.text3{ /* Places the text for the 3rd image */
+	width: 170px;
+	margin-right: 20px;
+	margin-left: 545px;
+	margin-top: -22.5px;
+	font-family: 'Lato', sans-serif;
+	color: white;
+}
+
+.text4{ /* Places the text for 4th image */
+	width: 170px;
+	margin-right: 20px;
+	margin-left: 790px;
+	margin-top: -22.5px;
+	font-family: 'Lato', sans-serif;
+	color: white;
+}
+
+.text5{ /* Places the text for the 5th image */
+	width: 175px;
+	margin-right: 20px;
+	margin-left: 1035px;
+	margin-top: -22.5px;
+	font-family: 'Lato', sans-serif;
+	color: white;
+}
+
+.text6{ /* Places the text for next to the map */
+	width: 675px;
+	margin-right: 20px;
+	margin-left: 575px;
+	margin-top: -410px;
+	font-family: 'Lato', sans-serif;
+	color: white;
+	font-size: 20px;
+}
+
+.content {
+	margin-top: -150px;
+	text-align: center; /* text alignment to the center of the page */
+	color: white; /* font colour is white */
+}
+
+.content2 {
+	text-align: center; /* text alignment to the center of the page */
+	color: white; /* font colour is white */
+}
+
+.content3 {
+	text-align: left;
+	width: 1200px; /* Sets the width of the div */
+	margin-right: 20px; /* Helps with spacing */
+	margin-left: 55px; /* Places the text */
+	font-family: 'Lato', sans-serif; /* Sets the font for the text */
+	color: white; /* Sets the font colour for the text */
+}
+
+.content4 {
+	margin-top: -150px;
+	text-align: center; /* text alignment to the center of the page */
+	color: white; /* font colour is white */
+}
+
+.content3 h3 {
+	font-size: 35px;
+	font-family: 'PT Sans', sans-serif;
+}
+
+.content h1 { /* Is only for h1 text in the content div */
+	font-size: 45px; /* Sets font size */
+	font-family: "Roboto"; /* Sets font family */
+}
+
+.content4 h1 { /* Is only for h1 text in the content4 div */
+	font-size: 45px; /* Sets font size */
+	font-family: "Roboto"; /* Sets font family */
+}
+
+.content2 h2 { /* Is only for h2 text in the content2 div */
+	font-size: 40px;
+	font-family: "Roboto";
+}
+
+.content2 p{ /* Is only for p text in the content2 div */
+	font-size: 25px;
+	font-family: "Roboto";
+}
+
+.content p{ /* Is only for p text in the content div */
+	font-size: 30px;
+	font-family: "Roboto";
+}
+
+.content4 p{ /* Is only for p text in the content4 div */
+	font-size: 22px;
+	font-family: "Roboto";
+}
+
+/* Burger menu */
+/* Importing fonts from google fonts */
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@700&display=swap'); /* font-family: 'Lato', sans-serif; */
+
+.menu-wrap{
+	position: fixed;
+	top: 0; /* Positions the element */
+	left: 0; /* Positions the element */
+	z-index: 1; /* Makes the burger menu pop out */
+}
+
+.menu-wrap .toggler{
+	position: absolute; /* Keeps the burger menu out of the way of everything else */
+	top: 0;
+	left: 0;
+	z-index: 2; /* Puts the toggler above everything else so that it can be clicked */
+	cursor: pointer; /* Makes it so it changes when it is clicked */
+	width: 50px; /* Sets width and height */
+	height: 50px;
+	opacity: 0; /* Sets opacity */
+}
+
+.menu-wrap .hamburger{ /* Sets elements of the burger menu */
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 1;
+	width: 60px;
+	height: 60px;
+	padding: 1rem;
+	background: var(--primary-color);
+	display: flex;
+	align-items: center; /* Centers everything */
+	justify-content: center;
+}
+
+/* Humburger line */
+.menu-wrap .hamburger > div{
+	position: relative;
+	width: 100%;
+	height: 2px;
+	background-color: #fff;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	transition: all 0.4s ease;
+}
+
+/* Top and bottom lines */
+.menu-wrap .hamburger > div:before,
+.menu-wrap .hamburger > div:after{
+	content: '';
+	position: absolute;
+	z-index: 1;
+	top: -10px;
+	width: 100%;	
+	height: 2px;
+	background: inherit;
+}
+
+/* Moves line down */
+.menu-wrap .hamburger > div:after{
+	top: 10px;
+}
+
+/* Toggler Animate */
+.menu-wrap .toggler:checked + .hamburger > div{
+	transform: rotate(135deg);
+}
+
+/* Turn lines into X */
+.menu-wrap .toggler:checked + .hamburger > div:before,
+.menu-wrap .toggler:checked + .hamburger > div:after{
+	top: 0;
+	transform: rotate(90deg)
+}
+
+/* Rotate on hover when checked */
+.menu-wrap .toggler:checked:hover + .hamburger > div{
+	transform: rotate(225deg);
+}
+
+/* Show menu */
+.menu-wrap .toggler:checked ~ .menu{
+	visibility: visible;
+}
+
+.menu-wrap .toggler:checked ~ .menu > div{
+	transform: scale(1);
+	transition-duration: var(--menu-speed);
+}
+
+.menu-wrap .toggler:checked ~ .menu > div > div{
+	opacity: 1;
+	transition: opacity	4s ease;
+}
+
+.menu-wrap .menu{ /* Transition for the burger menu */
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;	
+	visibility: hidden;
+	overflow: hidden;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.menu-wrap .menu > div{ /* Places the text for the burger menu overlay */
+	background: var(--overlay-color);
+	border-radius: 50%;
+	width: 200vw;
+	height: 200vw;
+	display: flex;
+	flex: none;
+	align-items: center;
+	justify-content: center;
+	transform: scale(0);
+	transition: all 0.4s ease;
+}
+
+.menu-wrap .menu > div > div{ /* Centers the overlay text */
+	text-align: center;
+	max-width: 90vw;
+	max-height: 100vh;
+	/* opacity: 0; */
+	transition: opacity 0.4s ease;
+}
+
+.menu-wrap .menu > div > div > ul > li{ /* Formats the overlay text */
+	list-style: none;
+	color: #fff;
+	font-size: 1.5rem;
+	padding: 1rem;
+}
+
+.menu-wrap .menu > div > div > ul > li > a{ /* Removes the underline of the overlay links (more formatting */
+	color: inherit;
+	text-decoration: none;
+	transition: color 0.4s ease;
+}
+
+/* Contact form - faq.html */
+input[type=text], select, textarea{ /* Sets the size for the dimentions for the text boxes */
+	width: 100%;
+	padding: 12px;
+	border: 1px solid #00AAFF;
+	border-radius: 4px;
+	resize: vertical;
+}
+
+label{
+	padding: 12px 12px 12px 0;
+	display: inline-block;
+}
+
+input[type=submit]{
+	background-color: #4CAF50;
+	color: white;
+	padding: 12px 20px;
+	border: none;
+	border-radius: 4px;
+	cursor: pointer;
+	float: right;
+	margin-right: 35px;
+}
+
+input[type=submit]:hover{ /* Sets the button hover colour */
+	background-color: #45a049;
+}
+
+.form_container{ /* Sets the dimentions for the overall div for the form */
+	border-radius: 5px;
+	background-color: transparent;
+	padding: 20px;
+	font-family: 'Roboto', sans-serif;
+	color: white;
+}
+
+.column{ /* Places the left column (the headings for the text boxes */
+	float: left;
+	width: 25%;
+	margin-top: 6px;
+}
+
+.column2{ /* Places the right column (the input boxes) */
+	float: left;
+	width: 73%;
+	margin-top: 6px;
+}
+
+.row:after{ /* Clears the form after use */
+	content: "";
+	display: table;
+	clear: both;
+}
+
+/* Register form */
+input[type=password], select, textarea{ /* Sets the size for the dimentions for the text boxes */
+	width: 100%;
+	padding: 12px;
+	border: 1px solid #00AAFF;
+	border-radius: 4px;
+	resize: vertical;
+}
+
+/* Pay form */
+input[type=Number], select, textarea{ /* Sets the size for the dimentions for the text boxes */
+	width: 100%;
+	padding: 12px;
+	border: 1px solid #00AAFF;
+	border-radius: 4px;
+	resize: vertical;
+}

@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+
+<html><!-- Do NOT put any content outside of the HTML tags-->
+	<head>
+		<title>Register and Pay</title>
+		<link rel="icon" type="image/png" href="logo-icon.png"/> <!-- Icon (For the image in the website tab) -->
+		<link rel= "stylesheet" type="text/css" href="style.css">
+		<script src="myscripts.js"></script>
+	</head>
+	
+    <!-- All content visible on the webpage will be inside the body tags below-->
+	<body> 
+	<div class="menu-wrap"> 
+		<input type="checkbox" class="toggler">
+		<div class="hamburger"><div></div></div>
+		<div class="menu">
+			<div>
+				<div>
+					<ul>
+						<li><a href="index.html">Home</a></li> <!-- Home page -->
+						<li><a href="products.html">Our Services</a></li> <!-- Explaination of Services -->
+						<li><a href="faq.html">FAQ</a></li> <!-- Frequently asked questions -->
+						<li><a href="regpay.html">Register & Pay</a></li> <!-- 	Regestiring accounts and bike/scooter hires -->
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="body3">
+		<div class="body-overlay">
+			<div class="logo2">
+				<!-- Calls the image and sets the dimentions of the image -->
+				<img src="logo2.png" alt="Icon" title="Our Icon" style="width: 150px; height: 150px;">
+			</div>
+			<div class="content">
+				<br>
+				<h1>Register and Pay</h1>
+				<p>This page is for register accounts and paying for rentals.</p>
+				<p>You will need to set up an account before you are able to being hiring.</p>
+				<br><hr><br>
+			</div>
+			<div class="content2">
+				<h2>Register</h2>
+				<br><hr>
+			</div>
+			<!-- Register form -->
+			<div class="form_container">
+				<form form ="reg_form" onsubmit="reg_form()">  
+					<!-- Full Name Field -->
+					<div class="row">
+						<div class="column">
+							<h3><label for="name">Full Name</label></h3>
+						</div>
+						<div class="column2">
+							<input type="text" id="name" placeholder="Your Full Name">
+						</div>
+					</div>
+
+					<!-- Email Address Field -->
+					<div class="row">
+						<div class="column">
+							<h3><label for="email">Email Address</label></h3>
+						</div>
+						<div class="column2">
+							<input type="text" id="email" placeholder="Your Email Address">
+						</div>
+					</div>
+
+					<!-- Contact Number Field -->
+					<div class="row">
+						<div class="column">
+							<h3><label for="phone">Contact Number</label></h3>
+						</div>
+						<div class="column2">
+							<input type="text" id="phone" placeholder="Your Contact Number">
+						</div>
+					</div>
+
+					<!-- Username Field -->
+					<div class="row">
+						<div class="column">
+							<h3><label for="message">Username</label></h3>
+						</div>
+						<div class="column2">
+							<input type="text" id="username" placeholder="Your New Username">
+						</div>
+					</div>
+					
+					<!-- Password Field -->
+					<div class="row">
+						<div class="column">
+							<h3><label for="message">Password</label></h3>
+						</div>
+						<div class="column2">
+							<input type="password" placeholder="Your Password"> <!-- Password field so that the text is dots (for privacy) -->
+						</div>
+					</div>
+
+					<br>
+					
+					<!-- Submit Button -->
+					<div class="row">
+						<input type="submit" value="Submit">
+					</div>
+				</form>
+			</div>
+			<div class="content2">
+				<br><hr><br>
+				<h2>Pay</h2>
+				<br><hr>
+			</div>
+			<!-- Pay form -->
+			<div class="form_container">
+				<form form ="pay_form" onsubmit="pay_form()">  
+					<!-- Username Field -->
+					<div class="row">
+						<div class="column">
+							<h3><label for="message">Username</label></h3>
+						</div>
+						<div class="column2">
+							<input type="text" id="username2" placeholder="Your Username">
+						</div>
+					</div>
+					
+					<!-- Password Field -->
+					<div class="row">
+						<div class="column">
+							<h3><label for="message">Password</label></h3>
+						</div>
+						<div class="column2">
+							<input type="password" placeholder="Your Password">
+						</div>
+					</div>
+					
+					<!-- Card Number Field -->
+					<div class="row">
+						<div class="column">
+							<h3><label for="message">Card Number</label></h3>
+						</div>
+						<div class="column2">
+							<input type="password" placeholder="Your Card Number">
+						</div>
+					</div>
+					
+					<!-- Expiry date Field -->
+					<div class="row">
+						<div class="column">
+							<h3><label for="message">Expiry Date</label></h3>
+						</div>
+						<div class="column2">
+							<input type="text"  placeholder="Expiry Date: dd/mm/yy">
+						</div>
+					</div>
+					
+					<!-- CVV Field -->
+					<div class="row">
+						<div class="column">
+							<h3><label for="message">Security Code</label></h3>
+						</div>
+						<div class="column2">
+							<input type="text"  placeholder="CVV">
+						</div>
+					</div>
+					
+					<!-- Location Field -->
+					<div class="row">
+						<div class="column">
+							<h3><label for="message">Card Location</label></h3>
+						</div>
+						<div class="column2">
+							<input type="text"  placeholder="e.g. Wellington, New Zealand, 5028">
+						</div>
+					</div>
+					
+					<!-- Type Field -->
+					<div class="row">
+						<div class="column">
+							<h3><label for="message">Type</label></h3>
+						</div>
+						<div class="column2"> <!-- has to be lower case -->
+							<input type="text"  id="type" placeholder="e.g. scooter, helmet, mountain bike, road bike, e-bike (make sure it is one of these and no capital letters)">
+						</div>
+					</div>
+					
+					<!-- Hours Field -->
+					<div class="row">
+						<div class="column">
+							<h3><label for="number">Time</label></h3> 
+						</div>
+						<div class="column2"> <!-- Number so that the value can be used in calculations -->
+							<input type="number"  id="hours" placeholder="How many hours e.g. 3"> 
+						</div>
+					</div>
+
+					<br>
+					
+					<!-- Submit Button -->
+					<div class="row">
+						<input type="submit" value="Submit">
+					</div>
+				</form>
+			</div>
+			<hr><br>
+			<div class="footer">
+				&copy; Copyright Jake Boyd, all rights reserved, 2023
+			</div>
+		</div>
+	</div>
+	</body>
+</html> 
